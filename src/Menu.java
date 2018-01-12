@@ -11,10 +11,10 @@ public class Menu extends JFrame{
     public Menu() {
         this.setTitle("a");
         //this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        this.setSize(1000,700);
+        this.setSize(500,500);
         this.setContentPane(panel1);
         this.setVisible(true);
-        this.
+
         exitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -24,6 +24,7 @@ public class Menu extends JFrame{
         startGameButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                Window systeme3 = new Window();
 
             }
         });

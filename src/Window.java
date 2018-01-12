@@ -6,7 +6,7 @@ import javax.swing.JPanel;
 
 public class Window extends JFrame {
     public Window(){
-        this.setTitle("Ma premi�re fen�tre Java");
+        this.setTitle("Système 3");
         this.setSize(400, 500);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
