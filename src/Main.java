@@ -24,13 +24,7 @@ public class Main {
         earth.addLink(l_moon_earth);
         asteroid.addLink(l_moon_asteroid);
 
-
-
-
-
-
-
-
+        Window fen = new Window();
     }
 
 }
