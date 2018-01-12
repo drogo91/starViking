@@ -6,12 +6,12 @@ import javax.swing.JPanel;
 
 public class Window extends JFrame {
     public Window(){
-        this.setTitle("Ma premi�re fen�tre Java");
+        this.setTitle("Ma première fenêtre Java");
         this.setSize(400, 500);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        this.setContentPane(new Panneau());
+        this.setContentPane(new Panel());
 
         this.setVisible(true);
 
