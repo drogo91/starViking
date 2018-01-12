@@ -1,14 +1,14 @@
 import java.util.*;
 
 public class Sector {
-    public char wealth;
-    public String type;
-    public String mod_type;
-    public int mod_nbr;
-    public boolean capital;
-    public int x;
-    public int y;
-    public ArrayList<Link> theLinks;
+    private char wealth;
+    private String type;
+    private String mod_type;
+    private int mod_nbr;
+    private boolean capital;
+    private int x;
+    private int y;
+    private ArrayList<Link> theLinks;
 
     public Sector (char wealth, String type, String mod_type, int mod_nbr,boolean capital){
         this.wealth = wealth;
@@ -19,32 +19,70 @@ public class Sector {
         theLinks = new ArrayList<Link>();
     }
 
-    public char get_wealth(){
+    public Sector(){}
+
+    public char getWealth() {
         return wealth;
     }
 
-    public String get_type(){
+    public void setWealth(char wealth) {
+        this.wealth = wealth;
+    }
+
+    public String getType() {
         return type;
     }
-    /*public void String get_mod_type(){
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getMod_type() {
         return mod_type;
-    }*/
-    public int get_mod_nbr(){
+    }
+
+    public void setMod_type(String mod_type) {
+        this.mod_type = mod_type;
+    }
+
+    public int getMod_nbr() {
         return mod_nbr;
     }
-    public boolean get_capital(){
+
+    public void setMod_nbr(int mod_nbr) {
+        this.mod_nbr = mod_nbr;
+    }
+
+    public boolean isCapital() {
         return capital;
     }
-    public void set_capital(boolean capital){
+
+    public void setCapital(boolean capital) {
         this.capital = capital;
     }
 
-    public int get_x(){
+    public int getX() {
         return x;
     }
 
-    public int get_y(){
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
         return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public ArrayList<Link> getTheLinks() {
+        return theLinks;
+    }
+
+    public void setTheLinks(ArrayList<Link> theLinks) {
+        this.theLinks = theLinks;
     }
 
     // methodes
