@@ -1,6 +1,7 @@
 public class Main {
 
     public static void main(String[] args) {
+        /*
         SpaceSystem Systeme = new SpaceSystem();
 
         Sector moon = new Sector();
@@ -23,7 +24,7 @@ public class Main {
         moon.addLink(l_moon_asteroid);
         earth.addLink(l_moon_earth);
         asteroid.addLink(l_moon_asteroid);
-
+        */
         Menu fen = new Menu();
     }
 
