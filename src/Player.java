@@ -1,11 +1,13 @@
+import java.util.ArrayList;
+import java.util.*;
 public class Player {
     private String name;
     private String type;
     private int point;
     private int money;
-    private arraylist<Unit> listUnit;
+    private List<Unit> listUnit = new ArrayList<Unit>();
 
-    public Player(String name, String type, int point, int money, arraylist<Unit> listUnit) {
+    public Player(String name, String type, int point, int money, List<Unit> listUnit) {
         this.name = name;
         this.type = type;
         this.point = point;
@@ -45,11 +47,11 @@ public class Player {
         this.money = money;
     }
 
-    public arraylist<Unit> getListUnit() {
+    public List<Unit> getListUnit() {
         return listUnit;
     }
 
-    public void setListUnit(arraylist<Unit> listUnit) {
+    public void setListUnit(List<Unit> listUnit) {
         this.listUnit = listUnit;
     }
 }
