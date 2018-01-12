@@ -3,8 +3,6 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import javax.swing.JPanel;
 
-import com.sun.prism.BasicStroke;
-import com.sun.prism.paint.Color;
 
 import java.awt.Image;
 import java.awt.Stroke;
