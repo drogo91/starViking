@@ -82,6 +82,5 @@ public class Unit {
     public void setValueDef(int valueDef) {
         this.valueDef = valueDef;
     }
-    public
 
 }
