@@ -1,7 +1,8 @@
 public class Link {
-    public String type;
-    public Sector Sector1;
-    public Sector Sector2;
+    private String type;
+    private Sector Sector1;
+    private Sector Sector2;
+
 
     public Link(String type, Sector Sector1, Sector Sector2){
         this.type = type;
@@ -9,13 +10,29 @@ public class Link {
         this.Sector2 = Sector2;
     }
 
-    public String get_type(){
+    public Link(){}
+
+    public String getType() {
         return type;
     }
-    public Sector get_Sector1(){
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public Sector getSector1() {
         return Sector1;
     }
-    public Sector get_Sector2(){
+
+    public void setSector1(Sector sector1) {
+        Sector1 = sector1;
+    }
+
+    public Sector getSector2() {
         return Sector2;
+    }
+
+    public void setSector2(Sector sector2) {
+        Sector2 = sector2;
     }
 }
