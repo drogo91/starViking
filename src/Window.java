@@ -11,7 +11,7 @@ public class Window extends JFrame {
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        this.setContentPane(new Panneau());
+        this.setContentPane(new Panel());
 
         this.setVisible(true);
 
