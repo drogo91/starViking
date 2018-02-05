@@ -7,6 +7,7 @@ public class Menu extends JFrame{
     private JButton startGameButton;
     private JButton exitButton;
     private JButton tutorialButton;
+    private boolean state = true;
 
     public Menu() {
         this.setTitle("a");
@@ -14,7 +15,6 @@ public class Menu extends JFrame{
         this.setSize(1000,700);
         this.setContentPane(panel1);
         this.setVisible(true);
-        this.
         exitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -24,6 +24,8 @@ public class Menu extends JFrame{
         startGameButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                Start win = new Start();
+                panel1.setVisible(false);
 
             }
         });
@@ -33,5 +35,6 @@ public class Menu extends JFrame{
 
             }
         });
+
     }
 }

@@ -3,7 +3,11 @@ public class Main {
     public static void main(String[] args) {
         // TODO Auto-generated method stub
 
-        Menu fen = new Menu();
+        //Menu fen = new Menu();
+
+        Menu start = new Menu();
+
+
     }
 
 }
