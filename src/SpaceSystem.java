@@ -5,6 +5,7 @@ public class SpaceSystem {
     private char lvl_tech;
     private int wealth;
     private ArrayList<Sector> theSectors;
+    private Panel panel;
 
     public SpaceSystem(String name, char lvl_tech, int wealth){
         this.name = name;
@@ -39,7 +40,7 @@ public class SpaceSystem {
         this.wealth = wealth;
     }
 
-    public ArrayList<Sector> getTheSectors() {
+    public ArrayList<Sector> getAllTheSectors() {
         return theSectors;
     }
 
@@ -47,7 +48,12 @@ public class SpaceSystem {
         this.theSectors = theSectors;
     }
 
-    public void addSector(Sector aSector){
+    public Sector getTheSectors(int nbSector) {
+        return theSectors.get(nbSector);
+    }
+
+    public void addSector(Sector aSector)
+    {
         theSectors.add(aSector);
     }
 

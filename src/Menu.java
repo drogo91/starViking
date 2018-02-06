@@ -8,7 +8,7 @@ public class Menu extends JFrame{
     private JButton exitButton;
     private JButton tutorialButton;
 
-    public Menu() {
+    public Menu(SpaceSystem _SpaceSystem) {
         this.setTitle("a");
         //this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         this.setSize(500,500);
@@ -24,7 +24,7 @@ public class Menu extends JFrame{
         startGameButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Window systeme3 = new Window();
+                Window systeme3 = new Window(_SpaceSystem);
 
             }
         });

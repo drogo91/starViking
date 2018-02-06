@@ -1,22 +1,42 @@
+import java.awt.*;
 import java.util.*;
 
 public class Sector {
     private char wealth;
-    private String type;
-    private String mod_type;
+    private String type = "";       //le "" me sert à avoir la fin de la liste des secteurs
+    private String mod_type;        //inutile car le nom du secteur le précise déjà
     private int mod_nbr;
     private boolean capital;
     private int x;
     private int y;
+    private int largeur;
+    private Color couleur;
+    private int trait;
+    private int angleDebut;
+    private int angleFin;
     private ArrayList<Link> theLinks;
+    private Panel panel;
+    private Button bouton = new Button();
 
-    public Sector (char wealth, String type, String mod_type, int mod_nbr,boolean capital){
+    public Sector (char wealth, String type, /*String mod_type,*/ int mod_nbr,boolean capital, int _x, int _y, int _larg, Color _couleur, int _trait, int _angleDebut, int _angleFin){
         this.wealth = wealth;
         this.type = type;
-        this.mod_type = mod_type;
+        //this.mod_type = mod_type;
         this.mod_nbr = mod_nbr;
         this.capital = capital;
+        this.x = _x;
+        this.y = _y;
         theLinks = new ArrayList<Link>();
+        this.largeur = _larg;
+        this.couleur = _couleur;
+        this.trait = _trait;
+        this.angleDebut = _angleDebut;
+        this.angleFin = _angleFin;
+        //this.bouton.setLocation(x, y);
+        //this.bouton.setBounds(x, y, largeur, largeur);
+        //this.bouton.setBackground(Color.orange);
+        //this.bouton.setVisible(true);
+        //this.bouton.repaint();
     }
 
     public Sector(){}
@@ -85,12 +105,56 @@ public class Sector {
         this.theLinks = theLinks;
     }
 
+    public int getLargeur() {
+        return largeur;
+    }
+
+    public void setLargeur(int _largeur) {
+        this.largeur = _largeur;
+    }
+
+    public Color getCouleur() {
+        return couleur;
+    }
+
+    public void setCouleur(Color _couleur) {
+        this.couleur = _couleur;
+    }
+
+    public int getTrait() {
+        return trait;
+    }
+
+    public void setTrait(int _trait) {
+        this.trait = _trait;
+    }
+    public int getAngleDebut() {
+        return angleDebut;
+    }
+
+    public void setAngleDebut(int _angleDebut) {
+        this.angleDebut = _angleDebut;
+    }
+    public int getAngleFin() {
+        return angleFin;
+    }
+
+    public void setAngleFin(int _angleFin) {
+        this.angleFin = _angleFin;
+    }
+
+    public Button getBouton() {
+        return bouton;
+    }
+
+    public void setBouton(Button _bouton) {
+        this.bouton = _bouton;
+    }
+
     // methodes
 
     public void addLink(Link aLink){
         theLinks.add(aLink);
     }
-
-
 
 }
