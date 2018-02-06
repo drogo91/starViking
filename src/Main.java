@@ -9,7 +9,7 @@ public class Main {
         //paramètres du constructeur : char wealth, String type, /*String mod_type,*/ int mod_nbr,boolean capital, int _x, int _y, int _larg, Color _couleur, int _trait
         Sector moon = new Sector('C', "Vide", 0, false, 18, 218, 80, Color.RED, 8, 0, 0);
         Sector earthN = new Sector('B', "Atmospherique", 1, false, 100, 87, 122, Color.blue, 8, 0, 180);
-        Sector earthS = new Sector('B', "Atmospherique", 1, true, 100, 92, 122, Color.orange, 8, -180, 180);
+        //Sector earthS = new Sector('B', "Atmospherique", 1, true, 100, 92, 122, Color.orange, 8, -180, 180);
         Sector asteroid = new Sector('D', "Vide", 1, false, 155, 255, 90, Color.green, 8, 0, 0);        //rajouter le modificateur EW
         Sector planete = new Sector('D', "Vide", 0, false, 188, 353, 90, Color.green, 8, 0, 0);
         Sector deepSpace1 = new Sector('Z', "DeepSpace", 0, false, 263, 13, 75, Color.yellow, 6, 0, 0);
@@ -18,7 +18,7 @@ public class Main {
 
         Systeme.addSector(moon);
         Systeme.addSector(earthN);
-        Systeme.addSector(earthS);
+        //Systeme.addSector(earthS);
         Systeme.addSector(asteroid);
         Systeme.addSector(planete);
         Systeme.addSector(deepSpace1);

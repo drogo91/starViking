@@ -25,7 +25,6 @@ public class Menu extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 Window systeme3 = new Window(_SpaceSystem);
-
             }
         });
         tutorialButton.addActionListener(new ActionListener() {

@@ -10,14 +10,73 @@ import java.awt.event.*;
 public class Panel extends JPanel {
 
     private SpaceSystem SS;
+    private int hauteur;
 
-    
-    @Override
-    public synchronized MouseListener[] getMouseListeners() {
-        return super.getMouseListeners();
-    }
+    public MouseListener ML = new MouseListener() {
+        @Override
+        public void mouseClicked(MouseEvent e) {
+            int m_x = e.getX();
+            int m_y = e.getY();
+
+            //on trace tous les secteurs
+            for (int i=0; i < SS.getAllTheSectors().size(); i++)
+            {
+                if(SS.getTheSectors(i).getType().equals("Atmospherique"))
+                {
+                    //contains(SS.getTheSectors(i).getY(), SS.getTheSectors(i).getLargeur());
+                    hauteur = SS.getTheSectors(i).getLargeur()/2;
+                }
+                else
+                {
+                    hauteur = SS.getTheSectors(i).getLargeur();
+                }
+
+                if(m_x >= SS.getTheSectors(i).getX()
+                        && m_x <= SS.getTheSectors(i).getX()+SS.getTheSectors(i).getLargeur()
+                        //&& contains(SS.getTheSectors(i).getY(), SS.getTheSectors(i).getLargeur()))
+                        && m_y >= SS.getTheSectors(i).getY()
+                        && m_y <= SS.getTheSectors(i).getY()+hauteur)
+                {
+                    //ici on a clické sur le secteur
+                    System.out.println("click secteur " + SS.getTheSectors(i).getType());
+                }
+            }
+            /*
+            if(m_x >= SS.getTheSectors(sector).getX()
+                    && m_x <= SS.getTheSectors(sector).getX()+SS.getTheSectors(sector).getLargeur()
+                    && m_y >= SS.getTheSectors(sector).getY()
+                    && m_y <= SS.getTheSectors(sector).getY()+SS.getTheSectors(sector).getLargeur())
+            {
+                //ici on a clické sur le secteur
+                System.out.println("click secteur " + SS.getTheSectors(sector).getType());
+            }*/
+        }
+
+        @Override
+        public void mousePressed(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseReleased(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseEntered(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseExited(MouseEvent e) {
+
+        }
+    };
 
     public void paintComponent(Graphics g){
+
+        //on active l'écoute de la souris
+        addMouseListener(ML);
 
         //image de fond
         try {
@@ -26,7 +85,18 @@ public class Panel extends JPanel {
             System.out.println("getLocation()"+System.getProperty("user.dir"));
 
             //Pour une image de fond
-            g.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);
+            g.drawImage(img, 0, 0, this.getWidth()/2, this.getHeight(), this);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            //System.getProperty("user.dir") -> récupère le chemin du projet
+            Image img = ImageIO.read(new File(System.getProperty("user.dir")+"/image/map1_systeme3.jpg"));
+            System.out.println("getLocation()"+System.getProperty("user.dir"));
+
+            //Pour une image de fond
+            g.drawImage(img, 400, 0, this.getWidth()/2, this.getHeight(), this);
         } catch (IOException e) {
             e.printStackTrace();
         }

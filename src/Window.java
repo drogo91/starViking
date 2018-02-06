@@ -1,6 +1,5 @@
 import javax.swing.*;
-import java.awt.Graphics;
-import java.awt.Image;
+import java.awt.*;
 
 public class Window extends JFrame {
 
@@ -12,12 +11,12 @@ public class Window extends JFrame {
 
         this.SS = _SS;
         this.setTitle(SS.getName());
-        this.setSize(400, 500);
+        this.setSize(800, 500);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         this.setContentPane(new Panel(SS));
-
+        this.setBackground(Color.black);
         this.setVisible(true);
 
         //on trace tous les boutons
