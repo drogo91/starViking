@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Sector {
     private char wealth;
-    private String type = "";       //le "" me sert à avoir la fin de la liste des secteurs
+    private String type;
     private String mod_type;        //inutile car le nom du secteur le précise déjà
     private int mod_nbr;
     private boolean capital;
@@ -16,7 +16,7 @@ public class Sector {
     private int angleFin;
     private ArrayList<Link> theLinks;
     private Panel panel;
-    private Button bouton = new Button();
+    private Unit unite;
 
     public Sector (char wealth, String type, /*String mod_type,*/ int mod_nbr,boolean capital, int _x, int _y, int _larg, Color _couleur, int _trait, int _angleDebut, int _angleFin){
         this.wealth = wealth;
@@ -32,11 +32,6 @@ public class Sector {
         this.trait = _trait;
         this.angleDebut = _angleDebut;
         this.angleFin = _angleFin;
-        //this.bouton.setLocation(x, y);
-        //this.bouton.setBounds(x, y, largeur, largeur);
-        //this.bouton.setBackground(Color.orange);
-        //this.bouton.setVisible(true);
-        //this.bouton.repaint();
     }
 
     public Sector(){}
@@ -143,12 +138,20 @@ public class Sector {
         this.angleFin = _angleFin;
     }
 
-    public Button getBouton() {
+    /*public Button getBouton() {
         return bouton;
     }
 
     public void setBouton(Button _bouton) {
         this.bouton = _bouton;
+    }*/
+
+    public Unit getUnite() {
+        return unite;
+    }
+
+    public void setUnite(Unit unite) {
+        this.unite = unite;
     }
 
     // methodes
@@ -157,4 +160,9 @@ public class Sector {
         theLinks.add(aLink);
     }
 
+    public Link getALink(Link lien)
+    {
+        //(this.theLinks.contains(lien))
+        return theLinks.get(theLinks.indexOf(lien));
+    }
 }

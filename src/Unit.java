@@ -7,6 +7,8 @@ public class Unit {
     private int valueElect;
     private int valueAtt;
     private int valueDef;
+    private SpaceSystem spaceSystem;
+    private Sector sector;
 
     public Unit(String name, char levelTech, int weight, String code, char move, int valueElect, int valueAtt, int valueDef) {
         this.name = name;
@@ -83,4 +85,72 @@ public class Unit {
         this.valueDef = valueDef;
     }
 
+    public Sector getSector() { return sector; }
+
+    public void setSector(Sector sector) { this.sector = sector; }
+
+    public SpaceSystem getSpaceSystem() { return spaceSystem; }
+
+    public void setSpaceSystem(SpaceSystem spaceSystem) { this.spaceSystem = spaceSystem; }
+
+    //renvoie la possibilité de se déplacer sur un secteur
+    public boolean isMoveUnitPossible(Sector _sector, SpaceSystem _spaceSystem)
+    {
+        for (int i=0; i<= 10; i++)
+        {
+            switch (this.move)
+            {
+                case 'S':
+                    return true;
+                case 'P':
+                    if (this.spaceSystem.getName() != _spaceSystem.getName())
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return  false;
+                    }
+                case 'O':
+                    if (this.spaceSystem.getName() == _spaceSystem.getName())
+                    {
+                        if ((this.sector.getType() == _sector.getType() && _sector.getType().equals("vide"))
+                                || (this.sector.getType() == _sector.getType() && _sector.getType().equals("atmospherique")))
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return  false;
+                        }
+                    }
+                    else
+                    {
+                        return  false;
+                    }
+                case 'V':
+                    if (this.spaceSystem.getName() == _spaceSystem.getName())
+                    {
+                        if ((this.sector.getType() == _sector.getType() && _sector.getType().equals("vide"))
+                                || (this.sector.getType() == _sector.getType() && _sector.getType().equals("atmospherique")))
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return  false;
+                        }
+                    }
+                    else
+                    {
+                        return  false;
+                    }
+                case 'A':
+                    break;
+                default :
+                    break;
+            }
+        }
+        return false;
+    }
 }

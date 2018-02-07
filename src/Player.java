@@ -7,12 +7,11 @@ public class Player {
     private int money;
     private List<Unit> listUnit = new ArrayList<Unit>();
 
-    public Player(String name, String type, int point, int money, List<Unit> listUnit) {
+    public Player(String name, String type, int point, int money) {
         this.name = name;
         this.type = type;
         this.point = point;
         this.money = money;
-        this.listUnit = listUnit;
     }
 
     public String getName() {
