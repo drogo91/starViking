@@ -58,6 +58,7 @@ public class Panel extends JPanel {
         @Override
         public void mousePressed(MouseEvent e) {
 
+
         }
 
         @Override
@@ -150,6 +151,8 @@ public class Panel extends JPanel {
     {
         this.SS = _system;
     }
+
+
 
     public void moveUnit(SpaceSystem SS, Sector sector)
     {

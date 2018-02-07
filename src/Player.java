@@ -7,6 +7,17 @@ public class Player {
     private int money;
     private List<Unit> listUnit = new ArrayList<Unit>();
 
+    @Override
+    public String toString() {
+        return "Player{" +
+                "name='" + name + '\'' +
+                ", type='" + type + '\'' +
+                ", point=" + point +
+                ", money=" + money +
+                ", listUnit=" + listUnit +
+                '}';
+    }
+
     public Player(String name, String type, int point, int money) {
         this.name = name;
         this.type = type;
